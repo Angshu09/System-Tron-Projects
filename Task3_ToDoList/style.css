@@ -1,0 +1,122 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
+
+.sub-body {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding-top: 20px;
+  padding-inline: 10px;
+}
+
+.main-container {
+  min-width: 250px;
+  width: 700px;
+  background-color: rgb(252, 213, 187);
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  border-radius: 10px;
+}
+
+.main-container h1 {
+  font-size: 25px;
+}
+
+.todo-input {
+  width: 100%;
+  background-color: yellow;
+  display: flex;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.todo-input input {
+  width: 70%;
+  outline: none;
+  border: none;
+  padding: 13px;
+  font-size: 16px;
+}
+.todo-input button {
+  width: 30%;
+  border: none;
+  outline: none;
+  background-color: rgb(237, 121, 43);
+  color: white;
+  font-size: 16px;
+  transition: 0.3s;
+  cursor: pointer;
+}
+.todo-input button:hover {
+  background-color: rgb(255, 255, 255);
+  color: rgb(237, 121, 43);
+}
+
+.task {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px;
+  background-color: #f9f9f9;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  position: relative;
+  margin-bottom: 10px;
+}
+
+.custom-checkbox {
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  cursor: pointer;
+  position: relative;
+  outline: none;
+}
+
+.custom-checkbox:checked {
+  background-color: #4caf50;
+  border-color: #4caf50;
+}
+
+.custom-checkbox:checked::after {
+  content: "";
+  position: absolute;
+  width: 6px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -60%) rotate(45deg); /* Center the checkmark */
+}
+
+.task p {
+  margin: 0;
+  font-size: 16px;
+  color: #333;
+}
+
+.delete-btn{
+    position: absolute;
+    right: 10px;
+    border: none;
+    outline: none;
+    background: transparent;
+    cursor: pointer;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.checked{
+    text-decoration: line-through;
+    color: grey !important;
+}
